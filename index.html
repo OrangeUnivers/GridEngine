@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+        }
+
+        #grid-container {
+            position: fixed;
+            left: 10px;
+            top: 10px;
+            display: grid;
+            width: 100vw;
+            height: 100vh;
+            cursor: grab;
+        }
+        #grid-container div {
+            pointer-events: none;
+            -webkit-user-select: none;       
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+        #grid-container div img {
+            width: 100%;
+            height: 100%;
+            image-rendering: pixelated;
+        }
+        .error {
+            position: fixed;
+            display: flex;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+        }
+        .error div {
+            pointer-events: none;
+            -webkit-user-select: none;       
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="grid-container">
+    </div>
+    <div id="grid-error" class="error"><div>The Map has loaded incorrectly, pls fix me</div></div>
+    <script src="script.js"></script>
+</body>
+</html>
